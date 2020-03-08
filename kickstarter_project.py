@@ -39,9 +39,9 @@ class KickstarterProject:
             self.name,
             self.project_url,
             self.blurb,
-            self.currency + str(self.goal),
-            self.currency + str(self.pledged),
-            str(self.percent_funded),
-            self.currency + str(self.average_back_value),
+            self.currency + ('%.2f' % self.goal),
+            self.currency + ('%.2f' % self.pledged),
+            ('%.0f' % self.percent_funded),
+            self.currency + ('%.2f' % self.average_back_value),
             deadline_str,
             self.backers_count)
