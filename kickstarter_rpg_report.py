@@ -94,7 +94,7 @@ def main():
         projects: List[dict] = get_projects_from_page(page)
         last_page_project_count = len(projects)
 
-        if last_page_project_count is not 0:
+        if last_page_project_count > 0:
             page_count += 1
             for project in projects:
                 parsed_projects.append(KickstarterProject(project))
